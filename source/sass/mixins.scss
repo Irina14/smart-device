@@ -1,0 +1,38 @@
+@mixin container {
+  max-width: 1502px;
+  margin: 0 auto;
+}
+
+@mixin padding-desktop {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+@mixin padding-tablet {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@mixin padding-mobile {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin text($font-family, $font-size, $line-height) {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
