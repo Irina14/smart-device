@@ -1,9 +1,6 @@
 @mixin container {
   max-width: 1502px;
   margin: 0 auto;
-}
-
-@mixin padding-desktop {
   padding-left: 45px;
   padding-right: 45px;
 }
@@ -35,4 +32,22 @@
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
+}
+
+@mixin button($min-width, $height, $font-size, $color) {
+  display: inline-block;
+  min-width: $min-width;
+  height: $height;
+  padding: 0 15px;
+  font-family: $roboto-condensed;
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: $height;
+  color: $color;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+  border: 1px solid $color;
+  border-radius: 5px;
 }
