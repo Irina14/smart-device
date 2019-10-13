@@ -11,6 +11,11 @@
     width: 100%;
     min-height: 881px;
     background: $dark url("../../img/bg-header-desktop@1x.png") no-repeat center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/bg-header-desktop@2x.png");
+      background-size: 1920px 881px;
+    }
   }
 }
 
@@ -85,18 +90,22 @@
   margin-left: 5%;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: $blue;
     border-color: $blue;
   }
 }
 
-@media (max-width: $desktop-width) {
+@media (max-width: $tablet-width) {
   .header {
     &::before {
       min-height: 687px;
-      background: $dark url("../../img/bg-header-tablet@1x.png") no-repeat center top;
+      background: $dark url("../../img/bg-header-tablet@1x.png") no-repeat center -4px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-header-tablet@2x.png");
+        background-size: 1514px 691px;
+      }
     }
   }
 
@@ -112,7 +121,7 @@
 
     &--email {
       &::before {
-        top: 2px;
+        top: 1px;
         width: 25px;
         height: 19px;
         background-size: 25px 19px;
@@ -136,11 +145,16 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $mobile-width) {
   .header {
     &::before {
       min-height: 647px;
-      background: $dark url("../../img/bg-header-mobile@1x.png") no-repeat center top;
+      background: $dark url("../../img/bg-header-mobile@1x.png") no-repeat -625px -14px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-header-mobile@2x.png");
+        background-size: 1446px 662px;
+      }
     }
   }
 
