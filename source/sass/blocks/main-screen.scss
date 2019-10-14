@@ -1,0 +1,130 @@
+.main-screen {
+  min-height: 759px;
+  color: $white;
+  background-color: $dark;
+}
+
+.main-screen__wrapper {
+  @include container;
+  position: relative;
+  z-index: 10;
+  padding-top: 196px;
+}
+
+.main-screen__wrapper h1 {
+  @include text($roboto-condensed, 80px, 94px);
+  width: 60%;
+  margin-bottom: 28px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.main-screen__wrapper p {
+  @include text($pt-mono, 22px, 34px);
+  position: relative;
+  width: 56%;
+  margin-bottom: 43px;
+  padding-left: 94px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+  }
+}
+
+.main-screen__wrapper a {
+  @include button(407px, 55px, 16px, $white);
+  margin-left: 94px;
+  border: none;
+  background-color: $blue;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+  }
+}
+
+.main-screen__text--short {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .main-screen {
+    min-height: 595px;
+  }
+
+  .main-screen__wrapper {
+    padding-top: 97px;
+    padding-left: 89px;
+    padding-right: 25px;
+  }
+
+  .main-screen__wrapper h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .main-screen__wrapper p {
+    width: 62%;
+    margin-bottom: 53px;
+    padding-left: 48px;
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      top: 14px;
+      width: 33px;
+    }
+  }
+
+  .main-screen__wrapper a {
+    margin-left: 48px;
+    min-width: 379px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-screen {
+    min-height: 575px;
+  }
+
+  .main-screen__wrapper {
+    @include padding-mobile;
+    padding-top: 215px;
+  }
+
+  .main-screen__wrapper h1 {
+    width: 100%;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .main-screen__wrapper p {
+    width: 100%;
+    margin-bottom: 39px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .main-screen__wrapper a {
+    min-width: 287px;
+    margin-left: 0;
+  }
+
+  .main-screen__text {
+    &--short {
+      display: block;
+    }
+
+    &--long {
+      display: none;
+    }
+  }
+}
