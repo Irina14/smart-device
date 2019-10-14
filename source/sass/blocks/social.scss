@@ -1,0 +1,38 @@
+.social {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  padding: 5px 0;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.social__link,
+.social__link svg {
+  display: block;
+  width: 27px;
+  height: 27px;
+}
+
+.social__link:hover path,
+.social__link:focus path {
+  fill: $blue;
+}
+
+@media (max-width: $tablet-width) {
+  .social__item {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:not(:nth-child(3n)) {
+      margin-right: 15px;
+    }
+  }
+}
+
