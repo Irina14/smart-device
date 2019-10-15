@@ -36,3 +36,15 @@
   }
 }
 
+@media (max-width: $mobile-width) {
+  .social__item {
+    &:not(:nth-child(3n)) {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
