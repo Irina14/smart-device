@@ -240,8 +240,14 @@
     padding-bottom: 49px;
   }
 
-  .footer__wrapper-social {
+  .footer__wrapper-social,
+  .footer__wrapper-block,
+  .footer__wrapper-bottom {
     @include padding-mobile;
+  }
+
+
+  .footer__wrapper-social {
     flex-direction: column;
   }
 
@@ -271,10 +277,6 @@
     border-bottom: 1px solid $grey;
   }
 
-  .footer__wrapper-block {
-    @include padding-mobile;
-  }
-
   .footer__content-block {
     display: none;
 
@@ -296,7 +298,6 @@
   }
 
   .footer__wrapper-bottom {
-    @include padding-mobile;
     flex-direction: column;
   }
 
