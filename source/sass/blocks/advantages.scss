@@ -58,7 +58,7 @@
 
 @media (max-width: $tablet-width) {
   .advantages {
-    margin-bottom: 59px;
+    margin-bottom: 26px;
   }
 
   .advantages__wrapper {
@@ -94,6 +94,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .advantages {
+    margin-bottom: 55px;
+  }
+
   .advantages__wrapper {
     @include padding-mobile;
   }

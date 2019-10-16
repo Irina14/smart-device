@@ -35,11 +35,19 @@
 .about-company__content p {
   margin: 0;
   margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.about-company__content p b {
+  display: none;
 }
 
 .about-company__content a {
   @include button(180px, 45px, 14px, $blue);
-  margin-top: 19px;
+  // margin-top: 19px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -48,5 +56,72 @@
   &:focus {
     color: $white;
     background-color: $blue;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about-company__wrapper {
+    @include padding-tablet;
+  }
+
+  .about-company__content {
+    width: 100%;
+    min-height: 360px;
+    padding-right: 0;
+    padding-left: 188px;
+
+    &::before {
+      width: 136px;
+      height: 354px;
+      background: url("../../img/bg-about-company-tablet@1x.png") no-repeat left 5px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-about-company-tablet@2x.png");
+        background-size: 136px 354px;
+      }
+    }
+  }
+
+  .about-company__content h2 {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 25px;
+  }
+
+  .about-company__content p b {
+    display: inline-block;
+  }
+
+  .about-company__content p span {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-company__wrapper {
+    @include padding-mobile;
+  }
+
+  .about-company__content {
+    min-height: auto;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .about-company__content h2 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 20px;
+  }
+
+  .about-company__content p {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
   }
 }
