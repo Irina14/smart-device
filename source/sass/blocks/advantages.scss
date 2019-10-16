@@ -1,6 +1,9 @@
+.advantages {
+  margin-bottom: 75px;
+}
+
 .advantages__wrapper {
   @include container;
-  margin-bottom: 110px;
 }
 
 .advantages__list {
@@ -54,9 +57,12 @@
 }
 
 @media (max-width: $tablet-width) {
+  .advantages {
+    margin-bottom: 59px;
+  }
+
   .advantages__wrapper {
     @include padding-tablet;
-    margin-bottom: 59px;
   }
 
   .advantages__list {
