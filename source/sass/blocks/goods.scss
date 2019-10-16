@@ -109,3 +109,120 @@
   margin: 0;
   width: 170px;
 }
+
+@media (max-width: $tablet-width) {
+  .goods__wrapper {
+    @include padding-tablet;
+    padding-top: 50px;
+    padding-bottom: 78px;
+  }
+
+  .goods__wrapper h2 {
+    width: 86%;
+    margin: 0 0 50px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .goods__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .goods__item {
+    width: 715px;
+    min-height: 256px;
+
+    &:not(:last-child) {
+      margin-bottom: 46px;
+    }
+
+    &--production {
+      background: url("../../img/bg-goods1-tablet@1x.png") no-repeat center top;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-goods1-tablet@2x.png");
+        background-size: 715px 256px;
+      }
+    }
+
+    &--installation {
+      background: url("../../img/bg-goods2-tablet@1x.png") no-repeat center top;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-goods2-tablet@2x.png");
+        background-size: 715px 256px;
+      }
+    }
+
+    &--components {
+      background: url("../../img/bg-goods3-tablet@1x.png") no-repeat center top;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-goods3-tablet@2x.png");
+        background-size: 715px 256px;
+      }
+    }
+  }
+
+  .goods__item a {
+    min-height: 256px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .goods__wrapper {
+    @include padding-mobile;
+    padding-bottom: 64px;
+  }
+
+  .goods__wrapper h2 {
+    width: 95%;
+    margin: 0 auto 41px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .goods__item {
+    width: 290px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &--production {
+      background: url("../../img/bg-goods1-mobile@1x.png") no-repeat center top;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-goods1-mobile@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &--installation {
+      background: url("../../img/bg-goods2-mobile@1x.png") no-repeat center top;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-goods2-mobile@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &--components {
+      background: url("../../img/bg-goods3-mobile@1x.png") no-repeat center top;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-goods3-mobile@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+  }
+
+  .goods__item a {
+    padding: 20px 30px;
+  }
+}
