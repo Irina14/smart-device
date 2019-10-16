@@ -1,0 +1,26 @@
+.page-main__wrapper {
+  padding-top: 112px;
+  padding-bottom: 96px;
+  background: $white url("../../img/bg-advantages@1x.png") no-repeat -417px -30px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/bg-advantages@2x.png");
+    background-size: 2243px 1347px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-main__wrapper {
+    padding-top: 54px;
+    padding-bottom: 83px;
+    background-position: -646px -88px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-main__wrapper {
+    padding-top: 37px;
+    padding-bottom: 65px;
+    background-position: -976px 476px;
+  }
+}
