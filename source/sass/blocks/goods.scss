@@ -56,7 +56,7 @@
   }
 }
 
-.goods__item a {
+.goods__link {
   position: relative;
   display: block;
   width: 100%;
@@ -167,7 +167,7 @@
     }
   }
 
-  .goods__item a {
+  .goods__link {
     min-height: 256px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -222,7 +222,7 @@
     }
   }
 
-  .goods__item a {
+  .goods__link {
     padding: 20px 30px;
   }
 }
