@@ -51,3 +51,14 @@
   border: 1px solid $color;
   border-radius: 5px;
 }
+
+@mixin arrow($width, $height, $deg) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  border: 1px solid $white;
+  border-top-style: none;
+  border-right-style: none;
+  transform: rotate($deg);
+}

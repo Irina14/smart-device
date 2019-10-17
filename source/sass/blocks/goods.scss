@@ -79,16 +79,9 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
+    @include arrow(6px, 6px, -135deg);
     bottom: 28px;
     right: 28px;
-    width: 6px;
-    height: 6px;
-    border: 1px solid $white;
-    border-top-style: none;
-    border-right-style: none;
-    transform: rotate(-135deg);
   }
 
   &:hover,
