@@ -1,0 +1,185 @@
+.popup {
+  position: absolute;
+  z-index: 30;
+  top: 136px;
+  left: calc(50% - 245px);
+  display: none;
+}
+
+.popup__wrapper {
+  position: relative;
+  z-index: 30;
+  width: 490px;
+  height: 605px;
+  padding: 30px 39px;
+  background-color: $blue;
+  color: $white;
+}
+
+.popup--open {
+  display: block;
+}
+
+.popup h2 {
+  @include text($roboto-condensed, 28px, 39px);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.popup p {
+  width: 380px;
+  margin: 0 0 32px;
+}
+
+.popup__close {
+  @include reset-button;
+  position: absolute;
+  top: 20px;
+  right: 21px;
+  width: 17px;
+  height: 17px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -3px;
+    width: 23px;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__field input,
+.popup__field textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 31px;
+  padding: 15px 24px 18px;
+  font: inherit;
+  color: $white;
+  border: none;
+  background-color: #19baff;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $white;
+  }
+}
+
+.popup__field textarea {
+  height: 104px;
+}
+
+.popup__field input {
+  line-height: 16px;
+}
+
+.popup__field--phone {
+  position: relative;
+}
+
+.popup__button {
+  @include reset-button;
+  @include button(412px, 47px, 14px, $white);
+  margin-bottom: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.popup__checkbox label {
+  display: block;
+  position: relative;
+  width: 386px;
+  padding-left: 49px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba($white, 0.8);
+  cursor: pointer;
+
+  &:hover::before {
+    outline: 1px solid $white;
+  }
+}
+
+.popup__checkbox input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -6px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+}
+
+.popup__checkbox input:checked + label::after {
+  @include arrow(6px, 4px, -45deg);
+  left: 5px;
+  top: -1px;
+}
+
+.popup__checkbox input:focus + label::before {
+  outline: 1px solid $white;
+}
+
+.popup__field .popup__error {
+  outline: 2px solid $error;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $error;
+  }
+}
+
+.popup__error-text {
+  position: absolute;
+  top: 54px;
+  font-size: 14px;
+  color: $error;
+}
+
+.popup__checkbox .popup__error {
+  &::before {
+    outline: 2px solid $error;
+  }
+
+  &:hover::before {
+    outline: 2px solid $error;
+  }
+}
+
+.popup__checkbox input:focus + .popup__error::before {
+  outline: 2px solid $error;
+}
+
+.popup--open .popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.popup-open-body {
+  overflow: hidden;
+}
