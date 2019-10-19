@@ -14,7 +14,7 @@
   display: flex;
   padding-right: 165px;
   padding-top: 93px;
-  padding-bottom: 114px;
+  padding-bottom: 112px;
 }
 
 .form__content {
@@ -203,7 +203,7 @@
   }
 
   .form__field--question {
-    margin-bottom: 45px;
+    margin-bottom: 43px;
   }
 
   .form__button {
@@ -221,7 +221,7 @@
   .form__wrapper {
     @include padding-mobile;
     padding-top: 30px;
-    padding-bottom: 41px;
+    padding-bottom: 43px;
   }
 
   .form__content {

@@ -1,7 +1,23 @@
 .main-screen {
+  position: relative;
   min-height: 759px;
   color: $white;
   background-color: $dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -122px;
+    left: 0;
+    width: 100%;
+    min-height: 881px;
+    background: $dark url("../../img/bg-main-desktop@1x.png") no-repeat center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/bg-main-desktop@2x.png");
+      background-size: 1920px 881px;
+    }
+  }
 }
 
 .main-screen__wrapper {
@@ -14,6 +30,7 @@
 .main-screen__wrapper h1 {
   @include text($roboto-condensed, 80px, 94px);
   width: 60%;
+  margin-left: -5px;
   margin-bottom: 28px;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -38,7 +55,7 @@
   }
 }
 
-.main-screen__wrapper a {
+.main-screen__button {
   @include button(407px, 55px, 16px, $white);
   margin-left: 94px;
   border: none;
@@ -58,6 +75,17 @@
 @media (max-width: $tablet-width) {
   .main-screen {
     min-height: 595px;
+
+    &::before {
+      min-height: 687px;
+      top: -92px;
+      background: $dark url("../../img/bg-main-tablet@1x.png") no-repeat center -4px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-main-tablet@2x.png");
+        background-size: 1514px 691px;
+      }
+    }
   }
 
   .main-screen__wrapper {
@@ -67,13 +95,14 @@
   }
 
   .main-screen__wrapper h1 {
+    margin-left: 0;
     font-size: 60px;
     line-height: 70px;
   }
 
   .main-screen__wrapper p {
     width: 62%;
-    margin-bottom: 53px;
+    margin-bottom: 54px;
     padding-left: 48px;
     font-size: 18px;
     line-height: 28px;
@@ -84,7 +113,7 @@
     }
   }
 
-  .main-screen__wrapper a {
+  .main-screen__button {
     margin-left: 48px;
     min-width: 379px;
   }
@@ -93,6 +122,17 @@
 @media (max-width: $mobile-width) {
   .main-screen {
     min-height: 575px;
+
+    &::before {
+      top: -72px;
+      min-height: 647px;
+      background: $dark url("../../img/bg-main-mobile@1x.png") no-repeat -625px -14px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/bg-main-mobile@2x.png");
+        background-size: 1446px 662px;
+      }
+    }
   }
 
   .main-screen__wrapper {
@@ -113,7 +153,7 @@
     line-height: 25px;
   }
 
-  .main-screen__wrapper a {
+  .main-screen__button {
     min-width: 287px;
     margin-left: 0;
   }

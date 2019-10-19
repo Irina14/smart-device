@@ -41,13 +41,12 @@
   }
 }
 
-.about-company__content p b {
-  display: none;
+.about-company__ellipsis {
+  font-weight: 400;
 }
 
-.about-company__content a {
+.about-company__button {
   @include button(180px, 45px, 14px, $blue);
-  // margin-top: 19px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -88,12 +87,22 @@
     margin-bottom: 25px;
   }
 
-  .about-company__content p b {
-    display: inline-block;
-  }
-
   .about-company__content p span {
     display: none;
+  }
+
+  .about-company__ellipsis {
+    position: relative;
+    padding-right: 18px;
+
+    &::before {
+      content: "..";
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
@@ -121,7 +130,7 @@
     margin-bottom: 40px;
 
     &:last-of-type {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
   }
 }
