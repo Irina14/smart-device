@@ -12,6 +12,19 @@
     var fieldPhone = form.querySelector('.form__field--phone');
     var formButton = form.querySelector('.form__button');
 
+    // Маска для поля ввода телефона
+    var phoneMask = IMask(userPhoneInput, {
+      mask: '+7(000)000-00-00'
+    });
+
+    // Проверка валидности номера телефона
+    var validPhone = function (mask) {
+      var reg = /^\d{10}$/;
+      var phoneValue = mask.unmaskedValue;
+      var valid = reg.test(phoneValue);
+      return valid;
+    };
+
     // Создание сообщения об ошибке
     var createMessage = function (text, field, classError) {
       var message = document.createElement('span');
@@ -28,14 +41,6 @@
       }
     };
 
-    // Проверка валидности номера телефона
-    var validPhone = function (input) {
-      var reg = /^\d[\d\(\)\ -]{4,14}\d$/;
-      var phoneValue = input.value;
-      var valid = reg.test(phoneValue);
-      return valid;
-    };
-
     // Проверка валидности поля
     var validField = function (field) {
       if (!field.validity.valid) {
@@ -49,7 +54,7 @@
       validField(userNameInput);
       validField(userPhoneInput);
 
-      if (userPhoneInput.validity.valid && !validPhone(userPhoneInput)) {
+      if (userPhoneInput.validity.valid && !validPhone(phoneMask)) {
         evt.preventDefault();
         userPhoneInput.classList.add('form__error');
         if (!fieldPhone.querySelector('.form__error-text')) {

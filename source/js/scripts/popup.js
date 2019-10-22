@@ -64,6 +64,11 @@
       closePopup();
     });
 
+    // Маска для поля ввода телефона
+    var phoneMask = IMask(userPhoneInput, {
+      mask: '+7(000)000-00-00'
+    });
+
     // Валидация формы
     var validField = function (field, key) {
       if (!field.validity.valid) {
@@ -80,7 +85,7 @@
       validField(userNameInput, 'name');
       validField(userPhoneInput, 'phone');
 
-      if (userPhoneInput.validity.valid && !window.form.validPhone(userPhoneInput)) {
+      if (userPhoneInput.validity.valid && !window.form.validPhone(phoneMask)) {
         evt.preventDefault();
         userPhoneInput.classList.add('popup__error');
         if (!fieldPhone.querySelector('.popup__error-text')) {
