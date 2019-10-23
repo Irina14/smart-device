@@ -217,5 +217,9 @@
 
   .goods__link {
     padding: 20px 33px;
+
+    &::after {
+      right: 31px;
+    }
   }
 }
