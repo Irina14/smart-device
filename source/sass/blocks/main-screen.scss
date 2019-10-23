@@ -29,7 +29,7 @@
 
 .main-screen__wrapper h1 {
   @include text($roboto-condensed, 80px, 94px);
-  width: 60%;
+  width: 720px;
   margin-left: -5px;
   margin-bottom: 28px;
   font-weight: 700;
@@ -124,8 +124,12 @@
   }
 
   .main-screen__button {
+    width: 379px;
     margin-left: 48px;
-    min-width: 379px;
+  }
+
+  .main-screen__link {
+    display: none;
   }
 }
 
@@ -164,7 +168,7 @@
   }
 
   .main-screen__button {
-    min-width: 287px;
+    width: 287px;
     margin-left: 0;
   }
 

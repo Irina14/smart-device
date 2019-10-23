@@ -34,9 +34,9 @@
   line-height: $line-height;
 }
 
-@mixin button($min-width, $height, $font-size, $color) {
+@mixin button($width, $height, $font-size, $color) {
   display: inline-block;
-  min-width: $min-width;
+  width: $width;
   height: $height;
   padding: 0 15px;
   font-family: $roboto-condensed;
