@@ -29,28 +29,28 @@
   min-height: 620px;
 
   &--production {
-    background: url("../../img/bg-goods1-desktop@1x.png") no-repeat center top;
+    background: url("../img/bg-goods1-desktop@1x.png") no-repeat center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-goods1-desktop@2x.png");
+      background-image: url("../img/bg-goods1-desktop@2x.png");
       background-size: 370px 620px;
     }
   }
 
   &--installation {
-    background: url("../../img/bg-goods2-desktop@1x.png") no-repeat center top;
+    background: url("../img/bg-goods2-desktop@1x.png") no-repeat center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-goods2-desktop@2x.png");
+      background-image: url("../img/bg-goods2-desktop@2x.png");
       background-size: 370px 620px;
     }
   }
 
   &--components {
-    background: url("../../img/bg-goods3-desktop@1x.png") no-repeat center top;
+    background: url("../img/bg-goods3-desktop@1x.png") no-repeat center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-goods3-desktop@2x.png");
+      background-image: url("../img/bg-goods3-desktop@2x.png");
       background-size: 370px 620px;
     }
   }
@@ -133,28 +133,28 @@
     }
 
     &--production {
-      background: url("../../img/bg-goods1-tablet@1x.png") no-repeat center top;
+      background: url("../img/bg-goods1-tablet@1x.png") no-repeat center top;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-goods1-tablet@2x.png");
+        background-image: url("../img/bg-goods1-tablet@2x.png");
         background-size: 715px 256px;
       }
     }
 
     &--installation {
-      background: url("../../img/bg-goods2-tablet@1x.png") no-repeat center top;
+      background: url("../img/bg-goods2-tablet@1x.png") no-repeat center top;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-goods2-tablet@2x.png");
+        background-image: url("../img/bg-goods2-tablet@2x.png");
         background-size: 715px 256px;
       }
     }
 
     &--components {
-      background: url("../../img/bg-goods3-tablet@1x.png") no-repeat center top;
+      background: url("../img/bg-goods3-tablet@1x.png") no-repeat center top;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-goods3-tablet@2x.png");
+        background-image: url("../img/bg-goods3-tablet@2x.png");
         background-size: 715px 256px;
       }
     }
@@ -188,28 +188,28 @@
     }
 
     &--production {
-      background: url("../../img/bg-goods1-mobile@1x.png") no-repeat center top;
+      background: url("../img/bg-goods1-mobile@1x.png") no-repeat center top;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-goods1-mobile@2x.png");
+        background-image: url("../img/bg-goods1-mobile@2x.png");
         background-size: 290px 256px;
       }
     }
 
     &--installation {
-      background: url("../../img/bg-goods2-mobile@1x.png") no-repeat center top;
+      background: url("../img/bg-goods2-mobile@1x.png") no-repeat center top;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-goods2-mobile@2x.png");
+        background-image: url("../img/bg-goods2-mobile@2x.png");
         background-size: 290px 256px;
       }
     }
 
     &--components {
-      background: url("../../img/bg-goods3-mobile@1x.png") no-repeat center top;
+      background: url("../img/bg-goods3-mobile@1x.png") no-repeat center top;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-goods3-mobile@2x.png");
+        background-image: url("../img/bg-goods3-mobile@2x.png");
         background-size: 290px 256px;
       }
     }

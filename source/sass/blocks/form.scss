@@ -1,9 +1,9 @@
 .form {
-  background: $blue url("../../img/bg-form@1x.png") no-repeat center top -60px;
+  background: $blue url("../img/bg-form@1x.png") no-repeat center top -60px;
   color: $white;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/bg-form@2x.png");
+    background-image: url("../img/bg-form@2x.png");
     background-size: 2212px 765px;
     background-position: center top -60px;
   }

@@ -17,10 +17,10 @@
     left: 0;
     width: 119px;
     height: 314px;
-    background: url("../../img/bg-about-company-desktop@1x.png") no-repeat left 6px;
+    background: url("../img/bg-about-company-desktop@1x.png") no-repeat left 6px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-about-company-desktop@2x.png");
+      background-image: url("../img/bg-about-company-desktop@2x.png");
       background-size: 119px 314px;
     }
   }
@@ -72,10 +72,10 @@
     &::before {
       width: 136px;
       height: 354px;
-      background: url("../../img/bg-about-company-tablet@1x.png") no-repeat left 5px;
+      background: url("../img/bg-about-company-tablet@1x.png") no-repeat left 5px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-about-company-tablet@2x.png");
+        background-image: url("../img/bg-about-company-tablet@2x.png");
         background-size: 136px 354px;
       }
     }

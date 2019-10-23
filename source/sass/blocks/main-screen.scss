@@ -11,10 +11,10 @@
     left: 0;
     width: 100%;
     min-height: 881px;
-    background: $dark url("../../img/bg-main-desktop@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-main-desktop@1x.png") no-repeat center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-main-desktop@2x.png");
+      background-image: url("../img/bg-main-desktop@2x.png");
       background-size: 1920px 881px;
     }
   }
@@ -79,10 +79,10 @@
     &::before {
       min-height: 687px;
       top: -92px;
-      background: $dark url("../../img/bg-main-tablet@1x.png") no-repeat center -4px;
+      background: $dark url("../img/bg-main-tablet@1x.png") no-repeat center -4px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-main-tablet@2x.png");
+        background-image: url("../img/bg-main-tablet@2x.png");
         background-size: 1514px 691px;
       }
     }
@@ -126,10 +126,10 @@
     &::before {
       top: -72px;
       min-height: 647px;
-      background: $dark url("../../img/bg-main-mobile@1x.png") no-repeat -625px -14px;
+      background: $dark url("../img/bg-main-mobile@1x.png") no-repeat -625px -14px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../../img/bg-main-mobile@2x.png");
+        background-image: url("../img/bg-main-mobile@2x.png");
         background-size: 1446px 662px;
       }
     }
