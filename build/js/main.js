@@ -157,7 +157,6 @@
     var ESC_KEYCODE = 27;
     var body = document.querySelector('body');
     var headerButton = document.querySelector('.header__button');
-    var popupWrapper = popup.querySelector('.popup__wrapper');
     var popupClose = popup.querySelector('.popup__close');
     var popupOverlay = document.querySelector('.popup-overlay');
     var userNameInput = popup.querySelector('#user-name-popup');
@@ -211,10 +210,11 @@
       closePopup();
     });
 
-    popupOverlay.addEventListener('click', function (evt) {
-      if (evt.target === popupWrapper || evt.target === userNameInput || evt.target === userPhoneInput || evt.target === questionTextarea || evt.target === checkbox || evt.target === checkboxLabel || evt.target === popupButton) {
-        return;
-      }
+    popup.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+    });
+
+    popupOverlay.addEventListener('click', function () {
       closePopup();
     });
 
