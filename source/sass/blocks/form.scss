@@ -25,6 +25,7 @@
 .form__content h2 {
   @include text($roboto-condensed, 36px, 51px);
   font-weight: 400;
+  margin-left: -4px;
   margin-bottom: 10px;
 }
 
@@ -86,9 +87,9 @@
 }
 
 .form__field textarea {
-  width: 100%;
+  width: 570px;
   height: 154px;
-  padding-top: 13px;
+  padding-top: 11px;
 }
 
 .form__field-group input {
@@ -141,6 +142,10 @@
   &:hover::before {
     outline: 1px solid $white;
   }
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .form__checkbox input + label::before {
@@ -159,8 +164,12 @@
   top: 8px;
 }
 
-.form__checkbox input:focus + label::before {
-  outline: 1px solid $white;
+.form__checkbox input:focus + label {
+  color: $white;
+
+  &::before {
+    outline: 1px solid $white;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -172,7 +181,7 @@
   .form__wrapper {
     @include padding-tablet;
     padding-top: 80px;
-    padding-bottom: 102px;
+    padding-bottom: 104px;
     justify-content: center;
   }
 
@@ -185,18 +194,27 @@
     font-size: 32px;
     line-height: 45px;
     margin-bottom: 16px;
+    margin-left: -2px;
   }
 
   .form__content p {
     margin-bottom: 53px;
+    padding-left: 4px;
   }
 
   .form__field-group input {
     width: 280px;
   }
 
+  .form__field input,
   .form__field textarea {
+    padding: 15px 19px 18px;
+  }
+
+  .form__field textarea {
+    width: 591px;
     height: 160px;
+    padding-top: 13px;
   }
 
   .form__field-group {
@@ -216,6 +234,10 @@
   .form__checkbox label {
     width: 275px;
   }
+
+  .form__checkbox label {
+    padding-left: 38px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -233,10 +255,12 @@
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 13px;
+    margin-left: 0;
   }
 
   .form__content p {
     margin-bottom: 25px;
+    padding-left: 0;
   }
 
   .form__field-group {
@@ -256,8 +280,15 @@
     margin-bottom: 30px;
   }
 
+  .form__field input,
   .form__field textarea {
+    padding: 16px 16px 18px;
+  }
+
+  .form__field textarea {
+    width: 100%;
     height: 104px;
+    padding-top: 13px;
   }
 
   .form__button {

@@ -1,9 +1,25 @@
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+
+  &--open {
+    display: block;
+  }
+}
+
 .popup {
   position: absolute;
   z-index: 30;
-  top: 136px;
-  left: calc(50% - 245px);
-  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .popup__wrapper {
@@ -14,10 +30,6 @@
   padding: 30px 39px;
   background-color: $blue;
   color: $white;
-}
-
-.popup--open {
-  display: block;
 }
 
 .popup h2 {
@@ -117,6 +129,10 @@
   &:hover::before {
     outline: 1px solid $white;
   }
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .popup__checkbox input + label::before {
@@ -135,8 +151,12 @@
   top: -1px;
 }
 
-.popup__checkbox input:focus + label::before {
-  outline: 1px solid $white;
+.form__checkbox input:focus + label {
+  color: $white;
+
+  &::before {
+    outline: 1px solid $white;
+  }
 }
 
 .popup__field .popup__error {
@@ -167,17 +187,6 @@
 
 .popup__checkbox input:focus + .popup__error::before {
   outline: 2px solid $error;
-}
-
-.popup--open .popup__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  overflow: auto;
 }
 
 .popup-open-body {

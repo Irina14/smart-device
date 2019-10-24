@@ -132,9 +132,14 @@
   .goods__item {
     width: 715px;
     min-height: 256px;
+    margin-bottom: 46px;
 
-    &:not(:last-child) {
-      margin-bottom: 46px;
+    &:not(:nth-child(3n)) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     &--production {
@@ -187,10 +192,7 @@
 
   .goods__item {
     width: 100%;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
 
     &--production {
       background: url("../img/bg-goods1-mobile@1x.png") no-repeat center top;

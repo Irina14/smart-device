@@ -7,8 +7,9 @@
     var ESC_KEYCODE = 27;
     var body = document.querySelector('body');
     var headerButton = document.querySelector('.header__button');
+    var popupWrapper = popup.querySelector('.popup__wrapper');
     var popupClose = popup.querySelector('.popup__close');
-    var popupOverlay = popup.querySelector('.popup__overlay');
+    var popupOverlay = document.querySelector('.popup-overlay');
     var userNameInput = popup.querySelector('#user-name-popup');
     var userPhoneInput = popup.querySelector('#user-phone-popup');
     var questionTextarea = popup.querySelector('#question-popup');
@@ -31,7 +32,7 @@
 
     // Открытие и закрытие попап
     var closePopup = function () {
-      popup.classList.remove('popup--open');
+      popupOverlay.classList.remove('popup-overlay--open');
       body.classList.remove('popup-open-body');
       document.removeEventListener('keydown', documentEscKeyHandler);
     };
@@ -44,7 +45,7 @@
 
     headerButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      popup.classList.add('popup--open');
+      popupOverlay.classList.add('popup-overlay--open');
       body.classList.add('popup-open-body');
       userNameInput.focus();
       document.addEventListener('keydown', documentEscKeyHandler);
@@ -60,7 +61,10 @@
       closePopup();
     });
 
-    popupOverlay.addEventListener('click', function () {
+    popupOverlay.addEventListener('click', function (evt) {
+      if (evt.target === popupWrapper || evt.target === userNameInput || evt.target === userPhoneInput || evt.target === questionTextarea || evt.target === checkbox || evt.target === checkboxLabel || evt.target === popupButton) {
+        return;
+      }
       closePopup();
     });
 

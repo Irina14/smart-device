@@ -105,6 +105,7 @@
   }
 
   .main-screen__wrapper h1 {
+    width: 470px;
     margin-left: 0;
     font-size: 60px;
     line-height: 70px;
@@ -118,7 +119,7 @@
     line-height: 28px;
 
     &::before {
-      top: 14px;
+      top: 15px;
       width: 33px;
     }
   }

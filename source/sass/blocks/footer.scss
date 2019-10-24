@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 70%;
+  width: 70.2%;
   font-size: 15px;
   line-height: 25px;
   color: $dark-clear;
@@ -46,7 +46,7 @@
   }
 
   &--contacts {
-    width: 34%;
+    width: 33.9%;
   }
 }
 
@@ -61,6 +61,7 @@
 .footer__title {
   @include text($roboto-condensed, 15px, 16px);
   margin-bottom: 25px;
+  padding-left: 2px;
   font-weight: 400;
   color: $dark;
   letter-spacing: 0.05em;
@@ -152,10 +153,6 @@
 }
 
 @media (max-width: $tablet-width) {
-  .footer__title {
-    padding-left: 2px;
-  }
-
   .footer__top {
     display: block;
     padding: 0;
