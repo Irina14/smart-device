@@ -12,6 +12,7 @@
     width: 100%;
     min-height: 881px;
     background: $dark url("../img/bg-main-desktop@1x.png") no-repeat center top;
+    background-size: 100% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-main-desktop@2x.png");
