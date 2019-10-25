@@ -90,6 +90,7 @@
   width: 570px;
   height: 154px;
   padding-top: 11px;
+  resize: none;
 }
 
 .form__field-group input {
@@ -109,7 +110,7 @@
 
 .form__button {
   @include reset-button;
-  @include button(270px, 45px, 14px, $white);
+  @include button(270px, 45px, 14px, 16px, $white);
 
   &:hover,
   &:focus {

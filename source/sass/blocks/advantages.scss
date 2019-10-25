@@ -49,6 +49,10 @@
   }
 }
 
+.advantages__item--privacy .advantages__link {
+  padding-top: 44px;
+}
+
 .advantages__item svg {
   display: block;
   margin-bottom: 20px;
@@ -95,6 +99,10 @@
 
   .advantages__link {
     padding: 24px 20px 20px 25px;
+  }
+
+  .advantages__item--privacy .advantages__link {
+    padding-top: 24px;
   }
 
   .advantages__item h3 {

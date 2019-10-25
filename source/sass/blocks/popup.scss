@@ -94,6 +94,7 @@
 
 .popup__field textarea {
   height: 104px;
+  resize: none;
 }
 
 .popup__field input {
@@ -106,7 +107,7 @@
 
 .popup__button {
   @include reset-button;
-  @include button(412px, 47px, 14px, $white);
+  @include button(412px, 47px, 14px, 16px, $white);
   margin-bottom: 40px;
 
   &:hover,

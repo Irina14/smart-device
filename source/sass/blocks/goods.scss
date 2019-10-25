@@ -196,6 +196,7 @@
 
     &--production {
       background: url("../img/bg-goods1-mobile@1x.png") no-repeat center top;
+      background-size: 100% auto;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/bg-goods1-mobile@2x.png");
@@ -205,6 +206,7 @@
 
     &--installation {
       background: url("../img/bg-goods2-mobile@1x.png") no-repeat center top;
+      background-size: 100% auto;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/bg-goods2-mobile@2x.png");
@@ -214,6 +216,7 @@
 
     &--components {
       background: url("../img/bg-goods3-mobile@1x.png") no-repeat center top;
+      background-size: 100% auto;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/bg-goods3-mobile@2x.png");

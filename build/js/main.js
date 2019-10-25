@@ -43,6 +43,7 @@
     var checkboxLabel = form.querySelector('.form__checkbox label');
     var fieldPhone = form.querySelector('.form__field--phone');
     var formButton = form.querySelector('.form__button');
+    var fields = [userNameInput, userPhoneInput, questionTextarea, checkboxLabel];
 
     // Маска для поля ввода телефона
     var phoneMask = IMask(userPhoneInput, {
@@ -66,8 +67,8 @@
     };
 
     // Удаление сообщения об ошибке
-    var removeMessage = function (field, selector) {
-      var errorText = field.querySelector(selector);
+    var removeMessage = function (field, selectorError) {
+      var errorText = field.querySelector(selectorError);
       if (errorText) {
         field.removeChild(errorText);
       }
@@ -80,6 +81,15 @@
       } else {
         field.classList.remove('form__error');
       }
+    };
+
+    // Удаление обводки ошибки
+    var removeError = function (arrayFields, classError) {
+      arrayFields.forEach(function (field) {
+        if (field.classList.contains(classError)) {
+          field.classList.remove(classError);
+        }
+      });
     };
 
     var formButtonClickHandler = function (evt) {
@@ -106,12 +116,21 @@
       }
     };
 
+    var documentClickHandler = function (evt) {
+      if (evt.target !== formButton) {
+        removeError(fields, 'form__error');
+        removeMessage(fieldPhone, '.form__error-text');
+      }
+    };
+
     formButton.addEventListener('click', formButtonClickHandler);
+    document.addEventListener('click', documentClickHandler);
 
     window.form = {
       createMessage: createMessage,
       removeMessage: removeMessage,
-      validPhone: validPhone
+      validPhone: validPhone,
+      removeError: removeError
     };
   }
 })();
@@ -166,6 +185,7 @@
     var checkboxLabel = popup.querySelector('.popup__checkbox label');
     var fieldPhone = popup.querySelector('.popup__field--phone');
     var popupButton = popup.querySelector('.popup__button');
+    var fields = [userNameInput, userPhoneInput, questionTextarea, checkboxLabel];
     var isStorageSupport = true;
     var storageName = '';
     var storagePhone = '';
@@ -262,7 +282,15 @@
       }
     };
 
+    var popupClickHandler = function (evt) {
+      if (evt.target !== popupButton) {
+        window.form.removeError(fields, 'popup__error');
+        window.form.removeMessage(fieldPhone, '.popup__error-text');
+      }
+    };
+
     popupButton.addEventListener('click', popupButtonClickHandler);
+    popup.addEventListener('click', popupClickHandler);
   }
 })();
 

@@ -55,7 +55,7 @@
 }
 
 .header__button {
-  @include button(180px, 45px, 14px, $white);
+  @include button(180px, 45px, 14px, 16px, $white);
   margin-left: 5%;
 
   &:hover,

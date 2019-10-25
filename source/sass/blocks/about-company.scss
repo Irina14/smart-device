@@ -46,10 +46,7 @@
 }
 
 .about-company__button {
-  @include button(180px, 45px, 14px, $blue);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  @include button(180px, 45px, 14px, 16px, $blue);
 
   &:hover,
   &:focus {

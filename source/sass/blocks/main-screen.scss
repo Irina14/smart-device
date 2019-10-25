@@ -24,6 +24,7 @@
   @include container;
   position: relative;
   z-index: 10;
+  min-height: 759px;
   padding-top: 196px;
 }
 
@@ -56,8 +57,9 @@
 }
 
 .main-screen__button {
-  @include button(407px, 55px, 16px, $white);
+  @include button(407px, 55px, 16px, 19px, $white);
   margin-left: 94px;
+  padding: 17px 15px;
   border: none;
   background-color: $blue;
 
@@ -75,11 +77,16 @@
 .main-screen__link {
   position: absolute;
   left: 6px;
-  bottom: -148px;
+  bottom: 128px;
   font-size: 14px;
   line-height: 16px;
   color: rgba($white, 0.5);
   transform: rotate(-90deg);
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -99,6 +106,7 @@
   }
 
   .main-screen__wrapper {
+    min-height: auto;
     padding-top: 97px;
     padding-left: 89px;
     padding-right: 25px;

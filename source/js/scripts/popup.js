@@ -16,6 +16,7 @@
     var checkboxLabel = popup.querySelector('.popup__checkbox label');
     var fieldPhone = popup.querySelector('.popup__field--phone');
     var popupButton = popup.querySelector('.popup__button');
+    var fields = [userNameInput, userPhoneInput, questionTextarea, checkboxLabel];
     var isStorageSupport = true;
     var storageName = '';
     var storagePhone = '';
@@ -112,6 +113,14 @@
       }
     };
 
+    var popupClickHandler = function (evt) {
+      if (evt.target !== popupButton) {
+        window.form.removeError(fields, 'popup__error');
+        window.form.removeMessage(fieldPhone, '.popup__error-text');
+      }
+    };
+
     popupButton.addEventListener('click', popupButtonClickHandler);
+    popup.addEventListener('click', popupClickHandler);
   }
 })();
