@@ -1,12 +1,19 @@
+.header-main-screen-wrapper {
+  background: $dark url("../img/bg-main-desktop@1x.png") no-repeat center top;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-main-desktop@2x.png");
+    background-size: cover;
+  }
+}
+
 .header {
   color: $white;
-  background-color: $dark;
 }
 
 .header__wrapper {
   @include container;
-  position: relative;
-  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -66,6 +73,16 @@
 }
 
 @media (max-width: $tablet-width) {
+  .header-main-screen-wrapper {
+    background: $dark url("../img/bg-main-tablet@1x.png") no-repeat center -4px;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-main-tablet@2x.png");
+      background-size: cover;
+    }
+  }
+
   .header__wrapper {
     @include padding-tablet;
     padding-top: 20px;
@@ -100,6 +117,16 @@
 }
 
 @media (max-width: $mobile-width) {
+  .header-main-screen-wrapper {
+    background: $dark url("../img/bg-main-mobile@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-main-mobile@2x.png");
+      background-size: cover;
+    }
+  }
+
   .header__wrapper {
     @include padding-mobile;
     padding-top: 17px;

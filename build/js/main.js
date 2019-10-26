@@ -83,7 +83,7 @@
       }
     };
 
-    // Удаление обводки ошибки
+    // Удаление рамки ошибки
     var removeError = function (arrayFields, classError) {
       arrayFields.forEach(function (field) {
         if (field.classList.contains(classError)) {

@@ -1,32 +1,14 @@
 .main-screen {
-  position: relative;
   min-height: 759px;
   color: $white;
-  background-color: $dark;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -122px;
-    left: 0;
-    width: 100%;
-    min-height: 881px;
-    background: $dark url("../img/bg-main-desktop@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-main-desktop@2x.png");
-      background-size: 1920px 881px;
-    }
-  }
 }
 
 .main-screen__wrapper {
   @include container;
   position: relative;
-  z-index: 10;
   min-height: 759px;
   padding-top: 196px;
+  padding-bottom: 35px;
 }
 
 .main-screen__wrapper h1 {
@@ -93,24 +75,14 @@
 @media (max-width: $tablet-width) {
   .main-screen {
     min-height: 595px;
-
-    &::before {
-      min-height: 687px;
-      top: -92px;
-      background: $dark url("../img/bg-main-tablet@1x.png") no-repeat center -4px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-main-tablet@2x.png");
-        background-size: 1514px 691px;
-      }
-    }
   }
 
   .main-screen__wrapper {
-    min-height: auto;
+    min-height: 595px;
     padding-top: 97px;
     padding-left: 89px;
     padding-right: 25px;
+    padding-bottom: 20px;
   }
 
   .main-screen__wrapper h1 {
@@ -146,21 +118,11 @@
 @media (max-width: $mobile-width) {
   .main-screen {
     min-height: 575px;
-
-    &::before {
-      top: -72px;
-      min-height: 647px;
-      background: $dark url("../img/bg-main-mobile@1x.png") no-repeat -625px -14px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-main-mobile@2x.png");
-        background-size: 1446px 662px;
-      }
-    }
   }
 
   .main-screen__wrapper {
     @include padding-mobile;
+    min-height: 575px;
     padding-top: 215px;
   }
 
